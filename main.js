@@ -25,3 +25,6 @@ console.log(scores.length);
 pets[2] = "parrot"
 console.log(pets);
 
+const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
+const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
+const words3 = ["морковку", "макороны", "косточку"];
