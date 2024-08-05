@@ -36,5 +36,9 @@ function makePhrases() {
     const randomIndex_2 = Math.floor(Math.random() * words1.length)
     const randomIndex_3 = Math.floor(Math.random() * words1.length)
     
-    const
+    const phrase = words1[randomIndex_1] + " " + words2[randomIndex_2] + " " + words3[randomIndex_3]
+
+    alert(phrase)
 }
+
+makePhrases()
