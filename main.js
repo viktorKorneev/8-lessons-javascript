@@ -67,6 +67,37 @@ const scores = [60, 50, 60, 58, 54, 54,
     //     i = i + 1
     // }
 
+
+    function getBestScores(array, maxValue) {
+        const bestSolutions = []
+
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] === maxValue) {
+            bestSolutions.push(i)
+        } 
+    }
+    return bestSolutions
+    }
+
+    function printAndGetHighScore(array) {
+        let output;
+        let highScore = 0
+        let minScore = array[0]
+        for(let i = 0; i < array.length; i++) {
+            output = "Bubble solution #" + i + " score: " + array[i]
+            console.log(output);
+            if (highScore < array[i]) {
+                highScore = array[i]
+            } else if (minScore > array[i]) {
+                minScore = array[i]
+            }
+            
+        }
+        return highScore
+       }
+
+
+    //print scores and get high score   
    const minScore = printAndGetHighScore(scores) 
    const highScore = printAndGetHighScore(scores)
 
@@ -74,33 +105,9 @@ const scores = [60, 50, 60, 58, 54, 54,
    console.log("Highest bubble score: " + highScore);
    console.log("Min bubble score: " + minScore);
 
-   function printAndGetHighScore(array) {
-    let output;
-    let highScore = 0
-    let minScore = array[0]
-    for(let i = 0; i < array.length; i++) {
-        output = "Bubble solution #" + i + " score: " + array[i]
-        console.log(output);
-        if (highScore < array[i]) {
-            highScore = array[i]
-        } else if (minScore > array[i]) {
-            minScore = array[i]
-        }
-        
-    }
-    return highScore
-   }
-  
-    const bestSolutions = []
-
-    for(let i = 0; i < scores.length; i++) {
-        if(scores[i] === highScore) {
-            bestSolutions.push(i)
-        } 
-    }
-   
-    
-    console.log("Solutions with highest score: " + bestSolutions)
+   //get best scores
+  const bestSolutions = getBestScores(scores, highScore)
+  console.log("Solutions with highest score: " + bestSolutions)
     
     
     
