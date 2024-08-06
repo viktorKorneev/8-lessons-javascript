@@ -25,7 +25,7 @@ console.log(scores.length);
 pets[2] = "parrot";
 console.log(pets);
 
-function getrendomElement(array) {
+function getRandomElement(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
@@ -35,7 +35,7 @@ function makePhrases() {
   const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
   const words3 = ["морковку", "макороны", "косточку"];
 
-  const phrase = getrendomElement(words1) + " " + getrendomElement(words2) + " " + getrendomElement(words3);
+  const phrase = getRandomElement(words1) + " " + getRandomElement(words2) + " " + getRandomElement(words3);
 
   return phrase;
 }
