@@ -38,7 +38,11 @@ function makePhrases() {
     
     const phrase = words1[randomIndex_1] + " " + words2[randomIndex_2] + " " + words3[randomIndex_3]
 
-    alert(phrase)
+    return phrase
 }
+const result = makePhrases()
 
-makePhrases()
+alert(result)
+console.log(result);
+
+
