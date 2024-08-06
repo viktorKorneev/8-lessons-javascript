@@ -81,5 +81,16 @@ const scores = [60, 50, 60, 58, 54, 54,
         
     console.log("Bubbles tests: " + scores.length);
     console.log("Highest bubble score: " + highScore);
+
+    const bestSolutions = []
+
+    for(let i = 0; i < scores.length; i++) {
+        if(scores[i] === highScore) {
+            bestSolutions.push(i)
+        }
+    }
+
+    console.log("Solutions with highest score: " + bestSolutions)
+    
     
     
