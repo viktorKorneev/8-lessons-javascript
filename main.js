@@ -67,41 +67,39 @@ const scores = [60, 50, 60, 58, 54, 54,
     //     i = i + 1
     // }
 
-    let output;
-    let highScore = 0
-    let minScore = scores[0]
+   const minScore = printAndGetHighScore(scores) 
+   const highScore = printAndGetHighScore(scores)
 
-    
-    
-    
-
-    for(let i = 0; i < scores.length; i++) {
-        output = "Bubble solution #" + i + " score: " + scores[i]
-        console.log(output);
-        if (highScore < scores[i]) {
-            highScore = scores[i]
-        } else if (minScore > scores[i]) {
-            minScore = scores[i]
-        }
-        
-    }
-
-    
-
-   
    console.log("Bubbles tests: " + scores.length);
    console.log("Highest bubble score: " + highScore);
    console.log("Min bubble score: " + minScore);
 
-    
+   function printAndGetHighScore(array) {
+    let output;
+    let highScore = 0
+    let minScore = array[0]
+    for(let i = 0; i < array.length; i++) {
+        output = "Bubble solution #" + i + " score: " + array[i]
+        console.log(output);
+        if (highScore < array[i]) {
+            highScore = array[i]
+        } else if (minScore > array[i]) {
+            minScore = array[i]
+        }
+        
+    }
+    return highScore
+   }
+  
     const bestSolutions = []
 
     for(let i = 0; i < scores.length; i++) {
         if(scores[i] === highScore) {
             bestSolutions.push(i)
-        }
+        } 
     }
-
+   
+    
     console.log("Solutions with highest score: " + bestSolutions)
     
     
