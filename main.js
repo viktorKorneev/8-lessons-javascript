@@ -69,19 +69,31 @@ const scores = [60, 50, 60, 58, 54, 54,
 
     let output;
     let highScore = 0
+    let minScore = scores[0]
+
+    
+    
+    
 
     for(let i = 0; i < scores.length; i++) {
         output = "Bubble solution #" + i + " score: " + scores[i]
         console.log(output);
         if (highScore < scores[i]) {
             highScore = scores[i]
+        } else if (minScore > scores[i]) {
+            minScore = scores[i]
         }
         
     }
-        
-    console.log("Bubbles tests: " + scores.length);
-    console.log("Highest bubble score: " + highScore);
 
+    
+
+   
+   console.log("Bubbles tests: " + scores.length);
+   console.log("Highest bubble score: " + highScore);
+   console.log("Min bubble score: " + minScore);
+
+    
     const bestSolutions = []
 
     for(let i = 0; i < scores.length; i++) {
