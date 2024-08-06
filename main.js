@@ -14,7 +14,7 @@ const scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
 console.log(scores[0]);
 console.log(scores[2]);
 
-const pets = ["dog", "cat", "rat"]
+const pets = ["dog", "cat", "rat"];
 
 console.log(pets[2]);
 console.log(pets[3]);
@@ -22,27 +22,22 @@ console.log(pets[3]);
 console.log(pets.length);
 console.log(scores.length);
 
-pets[2] = "parrot"
+pets[2] = "parrot";
 console.log(pets);
 
-
+function getrendomElement(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
 
 function makePhrases() {
-    const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
-    const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
-    const words3 = ["морковку", "макороны", "косточку"];
+  const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
+  const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
+  const words3 = ["морковку", "макороны", "косточку"];
 
-    const randomIndex_1 = Math.floor(Math.random() * words1.length)
-    const randomIndex_2 = Math.floor(Math.random() * words1.length)
-    const randomIndex_3 = Math.floor(Math.random() * words1.length)
-    
-    const phrase = words1[randomIndex_1] + " " + words2[randomIndex_2] + " " + words3[randomIndex_3]
+  const phrase = getrendomElement(words1) + " " + getrendomElement(words2) + " " + getrendomElement(words3);
 
-    return phrase
+  return phrase;
 }
-const result = makePhrases()
 
-alert(result)
-console.log(result);
-
-
+alert(makePhrases());
