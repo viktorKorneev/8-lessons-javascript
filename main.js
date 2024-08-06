@@ -107,14 +107,11 @@ const costs = [.25, .27, .25, .25, .25, .25,
 
        function getMostCostEffectiveSolution(resultArray, costsArray, maxValue) {
         let index;
-        let cost = 100
-        for (let i = 0; i < resultArray.length; i++) {
-            if(resultArray[i] === maxValue){
-                if(costsArray[i] < cost) {
-                    cost = costsArray[i]
-                    index = i
-                }
-            }
+        const bestSolutions = getBestScores(resultArray, maxValue)
+        if(costsArray[bestSolutions[0]] < costsArray[bestSolutions[1]]){
+            index = bestSolutions[0]
+        } else {
+            index = bestSolutions[1]
         }
         return index
        }
@@ -132,5 +129,6 @@ const costs = [.25, .27, .25, .25, .25, .25,
   const bestSolutions = getBestScores(scores, highScore)
   console.log("Solutions with highest score: " + bestSolutions)
     
-   //get most cost effective solution
-    
+//get most cost effective solution
+const mostCostEffecttive = getMostCostEffectiveSolution(scores, costs, highScore)
+console.log("Bubble solution #" + mostCostEffecttive + " is the most cost effective");
