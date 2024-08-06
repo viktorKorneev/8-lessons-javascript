@@ -58,14 +58,20 @@ const scores = [60, 50, 60, 58, 54, 54,
     // Highest bubble score: 69
     // Solutions with highest score: #11, #18
 
-    let i = 0
+    // let i = 0
     let output
-    while (i < scores.length) {
+    // while (i < scores.length) {
+    //     output = "Bubble solution #" + i + " score: " + scores[i]
+    //     console.log(output);
+        
+    //     i = i + 1
+    // }
+
+    for(let i = 0; i < scores.length; i++) {
         output = "Bubble solution #" + i + " score: " + scores[i]
         console.log(output);
         
-        i = i + 1
     }
-
+        
     console.log("Bubbles tests: " + scores.length);
     
